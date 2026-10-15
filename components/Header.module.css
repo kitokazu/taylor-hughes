@@ -1,0 +1,31 @@
+/* Clear header: no background, so the reel runs behind it. It inverts against
+   whatever is underneath, and pulls the hero up beneath itself (-62px). */
+.header { position: sticky; top: 0; z-index: 20; margin-bottom: -62px; display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 18px var(--g); mix-blend-mode: difference; color: #fff; }
+.header a, .header a:hover, .header button { color: #fff; }
+/* Once past the hero (and on every inner page) the bar turns frosted and the blend goes away. */
+.headerSolid { mix-blend-mode: normal; color: var(--ink); background: rgba(243,239,231,.86); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
+.headerSolid a, .headerSolid button { color: var(--ink); }
+.headerSolid a:hover { color: var(--accent); }
+.logo { font-family: var(--font-display), serif; font-size: 26px; font-weight: 500; letter-spacing: -.01em; line-height: 1; white-space: nowrap; }
+.nav { display: flex; gap: clamp(14px, 2vw, 28px); font-size: 13px; white-space: nowrap; }
+.navItem { display: flex; padding: 4px 0; border-bottom: 1px solid transparent; }
+.navItem[aria-current="page"] { font-weight: 600; border-bottom-color: currentColor; }
+.menuBtn { display: none; font-size: 14px; padding: 8px 0; min-height: 44px; }
+
+/* Phone menu */
+@keyframes reveal { from { clip-path: circle(0% at 100% 0) } to { clip-path: circle(150% at 100% 0) } }
+.overlay { position: fixed; inset: 0; z-index: 40; background: var(--ground); display: flex; flex-direction: column; justify-content: space-between; padding: 20px 24px 32px; animation: reveal .55s cubic-bezier(.7,0,.2,1) both; }
+.overlayTop { display: flex; justify-content: space-between; align-items: center; }
+.closeBtn { font-size: 14px; min-height: 44px; padding: 0 4px; }
+.overlayNav { display: flex; flex-direction: column; gap: 6px; }
+.overlayItem { font-family: var(--font-display), serif; font-size: clamp(34px, 9vw, 52px); line-height: 1.1; letter-spacing: -.02em; font-weight: 400; opacity: .62; min-height: 44px; transition: padding .3s; }
+.overlayItem[aria-current="page"] { opacity: 1; padding-left: .4em; }
+.overlayFoot { font-size: 13px; color: var(--muted); display: flex; flex-direction: column; gap: 4px; }
+.footLink { display: inline-flex; align-items: center; gap: 8px; }
+
+@media (max-width: 899px) {
+  .nav { display: none; }
+  .menuBtn { display: block; }
+  .logo { font-size: 22px; }
+  .header { padding: 10px var(--g); }
+}

@@ -1,0 +1,43 @@
+/* Hidden unless the pre-paint script (or the component) opts in. */
+.intro { display: none; }
+
+:global(html.js-preload) .intro {
+  position: fixed; inset: 0; z-index: 200;
+  display: grid; place-content: center; justify-items: center; gap: 1.6rem;
+  padding: 0 24px; text-align: center;
+  background: var(--ink); color: var(--ground);
+  animation: lift 720ms cubic-bezier(.7,0,.2,1) 1560ms both;
+}
+
+.words { font-family: var(--font-display), serif; font-weight: 500; display: flex; flex-wrap: wrap; justify-content: center; gap: 0 .28em; font-size: clamp(2rem, 6vw, 3.4rem); line-height: 1.1; letter-spacing: -.02em; }
+.mask { display: inline-block; overflow: hidden; padding: 0 .04em; }
+.word { display: inline-block; transform: translateY(130%); animation: word 1520ms both; }
+
+.rule { width: min(280px, 60vw); height: 1px; background: color-mix(in srgb, var(--ground) 14%, transparent); overflow: hidden; }
+.rule span { display: block; height: 100%; background: var(--ground); transform: scaleX(0); transform-origin: center; animation: rule 1540ms linear 80ms both; }
+
+.meta { font-size: 12px; letter-spacing: .02em; opacity: 0; animation: meta 1000ms linear 620ms both; }
+
+/* One keyframe set per element covers entry, hold and exit, so nothing fights. */
+@keyframes word {
+  0% { transform: translateY(130%); animation-timing-function: cubic-bezier(.2,.8,.2,1); }
+  59.2% { transform: translateY(0); }
+  63.2% { transform: translateY(0); animation-timing-function: cubic-bezier(.6,0,1,1); }
+  100% { transform: translateY(-130%); }
+}
+@keyframes rule {
+  0% { transform: scaleX(0); opacity: 1; animation-timing-function: cubic-bezier(.65,0,.35,1); }
+  58.4% { transform: scaleX(1); opacity: 1; }
+  75.3% { transform: scaleX(1); opacity: 1; }
+  100% { transform: scaleX(1); opacity: 0; }
+}
+@keyframes meta {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  62% { opacity: 1; }
+  100% { opacity: 0; }
+}
+@keyframes lift {
+  from { transform: translateY(0); }
+  to { transform: translateY(-100%); }
+}

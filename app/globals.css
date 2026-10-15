@@ -1,0 +1,40 @@
+/* Direction A, Gallery. Light, editorial, quiet. */
+:root {
+  --ground: #f3efe7;
+  --tile: #e3ddd1;
+  --rule: #d8d1c4;
+  --ink: #171512;
+  --muted: #6f675c;
+  --accent: #a4703c;
+  --g: 40px; /* page gutter */
+  --grade: sepia(.32) saturate(.85) contrast(1.02); /* warm photo grade */
+}
+@media (max-width: 899px) {
+  :root { --g: 24px; }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  min-height: 100svh;
+  background: var(--ground);
+  color: var(--ink);
+  font-family: var(--font-text), sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+img { display: block; max-width: none; }
+a { color: var(--ink); text-decoration: none; }
+a:hover { color: var(--accent); }
+button { font: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; text-align: left; }
+dl, dd, p, h1, h2, h3 { margin: 0; }
+:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
+
+/* Letter ripple (components/Ripple.tsx): any [data-rh] host triggers its [data-ch] letters. */
+@keyframes ripple { 0% { transform: translateY(0) } 45% { transform: translateY(-.14em) } 100% { transform: translateY(0) } }
+[data-rh]:hover [data-ch],
+[data-rh]:focus-visible [data-ch] { animation: ripple .38s cubic-bezier(.4,0,.2,1) calc(var(--i) * 22ms); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; }
+}
