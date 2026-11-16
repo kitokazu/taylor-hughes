@@ -52,7 +52,7 @@ export function Header() {
       {open && (
         <div className={s.overlay} role="dialog" aria-modal="true" aria-label="Menu">
           <div className={s.overlayTop}>
-            <Link href="/" className={s.logo} style={{ fontSize: 20 }}>{NAME}</Link>
+            <Link href="/" className={s.logo}>{NAME}</Link>
             <button onClick={() => setOpen(false)} className={s.closeBtn}>Close</button>
           </div>
           <nav className={s.overlayNav} aria-label="Main">

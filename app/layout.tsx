@@ -8,7 +8,7 @@ import "./globals.css";
 
 // Upright only: no italics anywhere on the site.
 const display = Cormorant_Garamond({ subsets: ["latin"], weight: ["400", "500"], style: ["normal"], variable: "--font-display" });
-const text = Inter({ subsets: ["latin"], weight: ["400", "500", "600"], variable: "--font-text" });
+const text = Inter({ subsets: ["latin"], weight: ["400", "600"], variable: "--font-text" });
 
 const description = `${NAME}: ${ROLES.join(", ")}. Choreography, dance performance, teaching and movement direction.`;
 

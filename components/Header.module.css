@@ -20,7 +20,7 @@
 .overlayNav { display: flex; flex-direction: column; gap: 6px; }
 .overlayItem { font-family: var(--font-display), serif; font-size: clamp(34px, 9vw, 52px); line-height: 1.1; letter-spacing: -.02em; font-weight: 400; opacity: .62; min-height: 44px; transition: padding .3s; }
 .overlayItem[aria-current="page"] { opacity: 1; padding-left: .4em; }
-.overlayFoot { font-size: 13px; color: var(--muted); display: flex; flex-direction: column; gap: 4px; }
+.overlayFoot { font-size: 14px; color: var(--muted); display: flex; flex-direction: column; gap: 4px; }
 .footLink { display: inline-flex; align-items: center; gap: 8px; }
 
 @media (max-width: 899px) {

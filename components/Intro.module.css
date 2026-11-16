@@ -3,20 +3,20 @@
 
 :global(html.js-preload) .intro {
   position: fixed; inset: 0; z-index: 200;
-  display: grid; place-content: center; justify-items: center; gap: 1.6rem;
+  display: grid; place-content: center; justify-items: center; gap: 26px;
   padding: 0 24px; text-align: center;
   background: var(--ink); color: var(--ground);
   animation: lift 720ms cubic-bezier(.7,0,.2,1) 1560ms both;
 }
 
-.words { font-family: var(--font-display), serif; font-weight: 500; display: flex; flex-wrap: wrap; justify-content: center; gap: 0 .28em; font-size: clamp(2rem, 6vw, 3.4rem); line-height: 1.1; letter-spacing: -.02em; }
+.words { font-family: var(--font-display), serif; font-weight: 500; display: flex; flex-wrap: wrap; justify-content: center; gap: 0 .28em; font-size: clamp(32px, 6vw, 54px); line-height: 1.1; letter-spacing: -.02em; }
 .mask { display: inline-block; overflow: hidden; padding: 0 .04em; }
 .word { display: inline-block; transform: translateY(130%); animation: word 1520ms both; }
 
 .rule { width: min(280px, 60vw); height: 1px; background: color-mix(in srgb, var(--ground) 14%, transparent); overflow: hidden; }
 .rule span { display: block; height: 100%; background: var(--ground); transform: scaleX(0); transform-origin: center; animation: rule 1540ms linear 80ms both; }
 
-.meta { font-size: 12px; letter-spacing: .02em; opacity: 0; animation: meta 1000ms linear 620ms both; }
+.meta { font-size: 13px; letter-spacing: .02em; opacity: 0; animation: meta 1000ms linear 620ms both; }
 
 /* One keyframe set per element covers entry, hold and exit, so nothing fights. */
 @keyframes word {
