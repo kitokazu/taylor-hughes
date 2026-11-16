@@ -47,6 +47,10 @@ export const PHOTOS = {
   "md-clandestine-05": { src: "/photos/md-clandestine-05.jpg", w: 1326, h: 2000 }, // image41.jpg
   "md-clandestine-06": { src: "/photos/md-clandestine-06.jpg", w: 1326, h: 2000 }, // IMG_9991.JPG
   "md-clandestine-07": { src: "/photos/md-clandestine-07.jpg", w: 2000, h: 1326 }, // IMG_9992.JPG
+  "about-01": { src: "/photos/about-01.jpg", w: 1333, h: 2000 }, // IMG_9711.JPG
+  "teaching-01": { src: "/photos/teaching-01.jpg", w: 1600, h: 2000 }, // IMG_2060.JPG
+  "teaching-02": { src: "/photos/teaching-02.jpg", w: 2000, h: 2000 }, // IMG_4102.JPG
+  "teaching-03": { src: "/photos/teaching-03.jpg", w: 1742, h: 2000 }, // 1.JPG
 } as const;
 
 export const POSTERS = {
@@ -59,4 +63,5 @@ export const POSTERS = {
   "orMNvNEUzB8": { src: "/posters/orMNvNEUzB8.jpg", w: 1280, h: 720 },
   "CWFmWHok1bY": { src: "/posters/CWFmWHok1bY.jpg", w: 1280, h: 720 },
   "lYgOe6lZSsU": { src: "/posters/lYgOe6lZSsU.jpg", w: 640, h: 360 },
+  "QPfO5dOuLlA": { src: "/posters/QPfO5dOuLlA.jpg", w: 1280, h: 720 },
 } as const;

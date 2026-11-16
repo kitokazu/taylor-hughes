@@ -24,6 +24,7 @@ SRC = ROOT.parent / "taylor-website"
 DOCX = SRC / "Taylor's Website.docx"
 PF = SRC / "photos" / "Portfolio & Recent Projects"
 MD = SRC / "photos" / "Movement Direction"
+TEACH = SRC / "photos" / "Teaching"
 REEL = SRC / "mockups" / "public" / "videos" / "taylor_montage.mp4"
 
 LONG_SIDE = 2000
@@ -49,10 +50,13 @@ PROJECTS = {
                  MD / "MD(5).jpg", MD / "MD(2).jpg"],
     "md-clandestine": [MD / "IMG_0003.JPG", MD / "IMG_0011.JPG", MD / "IMG_0017.JPG", MD / "IMG_0018.JPG",
                        doc(41), MD / "IMG_9991.JPG", MD / "IMG_9992.JPG"],
+    # Single-use photos from Taylor's final updates, not part of any project strip.
+    "about": [PF / "IMG_9711.JPG"],
+    "teaching": [TEACH / "IMG_2060.JPG", TEACH / "IMG_4102.JPG", TEACH / "1.JPG"],
 }
 
 YOUTUBE = ["cP7MPj4-uPo", "7jJ3gfekW1s", "sU9FKLZcwwg", "qeiWKer3oGQ", "JM6zBSPJVGE",
-           "xpmag2Gvi0g", "orMNvNEUzB8", "CWFmWHok1bY", "lYgOe6lZSsU"]
+           "xpmag2Gvi0g", "orMNvNEUzB8", "CWFmWHok1bY", "lYgOe6lZSsU", "QPfO5dOuLlA"]
 
 
 def fresh(path):

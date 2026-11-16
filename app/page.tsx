@@ -20,7 +20,7 @@ export default function Home() {
 
       {/* Taylor first: her portrait beside the bio. */}
       <section className={s.block}>
-        <Img photo={PLACED.about} className={s.blockImg} sizes="(max-width: 900px) 100vw, 50vw" />
+        <Img photo={PLACED.portrait} className={s.blockImg} sizes="(max-width: 900px) 100vw, 50vw" />
         <div className={s.blockText}>
           <p className={s.lead}>{BIO}</p>
           <Link href="/about" className={s.link}>About Taylor</Link>

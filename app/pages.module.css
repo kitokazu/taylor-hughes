@@ -21,7 +21,7 @@
 .split { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 48px 80px; align-items: start; }
 .teach { max-width: 60ch; margin-bottom: 1.2em; font-family: var(--font-display), serif; font-size: clamp(20px, 1.8vw, 26px); line-height: 1.4; text-wrap: pretty; }
 .teachImgs { display: grid; gap: 10px; }
-.teachImg { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; }
+.teachImg { width: 100%; height: auto; }
 
 /* Photo strips (Movement Direction, Portfolio) */
 .strip { display: flex; gap: 10px; overflow-x: auto; scrollbar-width: none; padding: 0 var(--g); scroll-padding-left: var(--g); scroll-snap-type: x proximity; overscroll-behavior-x: contain; }

@@ -36,14 +36,18 @@ export const NAV: { key: NavKey; label: string; path: string }[] = [
 // Single-use photos placed outside the project lists.
 export const PLACED = {
   heroStill: photo("md-owens-03", NAME), // MD(3), shown until the reel plays
-  about: photo("studio-06", NAME), // IMG_9710, behind the About text and beside the home bio
-  teaching: photo("studio-01", "Dancers in the studio"), // IMG_9731
-  teaching2: photo("studio-05", "Dancers getting ready for class"), // IMG_9736
+  portrait: photo("studio-06", NAME), // IMG_9710, beside the home bio
+  about: photo("about-01", NAME), // IMG_9711, behind the About text
+  teaching: [
+    photo("teaching-01", "Dancers in a group lift on a red floor"), // IMG_2060
+    photo("teaching-02", "A dancer seen from behind in a ruffled dress"), // IMG_4102
+    photo("teaching-03", "A dancer with arms raised against a white wall"), // 1.JPG
+  ],
 };
 
 // Taylor's new bio (Q5 spelling fixes applied: The Place Theatre, Vesper Club, Karhu).
 export const BIO =
-  "Taylor Lauren Hughes is a choreographer, dancer, and movement artist from Southern California. She trained in contemporary, ballet, jazz, and commercial styles, and holds a BFA in Dance Performance from Chapman University and an MA in Dance Performance from London Contemporary Dance School. Taylor has performed and premiered work across the UK, US, and Europe, including Before the After at The Place Theatre and Act 2 at Vesper Club in London. She has toured internationally with Ballet Nights and appeared in campaigns for Claude x Formula 1 and Zomer x Karhu, featured in Vogue Japan. Her practice explores movement across fashion, commercial, and live performance spaces.";
+  "Taylor Lauren Hughes is a choreographer, dancer, and movement artist from Southern California. She trained in contemporary, ballet, jazz, and commercial styles, and holds a BFA in Dance Performance from Chapman University and an MA in Dance Performance from London Contemporary Dance School. Taylor has performed and premiered work across the UK, US, and Europe, including Before the After at The Place Theatre and Act 2 at Vesper Club in London. She has toured internationally with Ballet Nights and appeared in campaigns for Claude × Formula 1 and Zomer × Karhu, featured in Vogue Japan. Her practice explores movement across fashion, commercial, and live performance spaces.";
 
 // Q6: keep under the bio?
 export const FACTS: [string, string][] = [
@@ -66,13 +70,13 @@ export type Work = {
 
 // Order as Taylor listed it. Terra (JmEd65aymy4) dropped (Q3).
 export const CHOREO: Work[] = [
-  { id: "before-the-after", title: "Before the After", detail: "Performer & Choreographer, World Premiere, Resolution Dance Festival", venue: "The Place Theatre, London, UK", ...video("cP7MPj4-uPo") },
-  { id: "the-space-between", title: "The Space Between", detail: "Choreographer, Premiere, London Contemporary Dance School", venue: "The Place, London, UK", ...video("7jJ3gfekW1s") },
+  { id: "before-the-after", title: "Before the After", detail: "Choreographer and Performer, Resolution Dance Festival", venue: "The Place Theatre, London, UK", ...video("cP7MPj4-uPo") },
+  { id: "the-space-between", title: "The Space Between", detail: "Choreographer, London Contemporary Dance School", venue: "The Place, London, UK", ...video("7jJ3gfekW1s") },
   { id: "ecid-eht-llor", title: "ecid eht llor", detail: "Choreographer, Spring Dance Concert", venue: "Musco Center for the Arts, Orange, CA", ...video("sU9FKLZcwwg") },
-  { id: "locus", title: "Locus", detail: "Dance visual, choreographed and performed by Taylor Lauren Hughes", ...video("qeiWKer3oGQ") }, // Q9: venue
+  { id: "locus", title: "Locus", detail: "Choreographer and Performer, Dance Visual", venue: "Los Angeles, CA", ...video("qeiWKer3oGQ") },
   {
-    // No video; the doc places MD(1), MD(3), MD(2) under Abri Residency (Q4, Q9: role).
-    id: "act-2", title: "Act 2", detail: "Premiere at Equinox Show with Abri Creative Residency", venue: "Vesper Club, London, UK",
+    // No video; the doc places MD(1), MD(3), MD(2) under Abri Residency.
+    id: "act-2", title: "Act 2", detail: "Choreographer and Performer, Equinox Show created in support of Abri Residency", venue: "Vesper Club, London, UK",
     poster: photo("md-owens-02", "Act 2"),
     photos: [photo("md-owens-02", "Act 2"), photo("md-owens-03", "Act 2"), photo("md-owens-06", "Act 2")],
   },
@@ -80,10 +84,10 @@ export const CHOREO: Work[] = [
 ];
 
 export const PERF: Work[] = [
-  { id: "claude-f1", title: "Claude × F1", detail: "Dancer, campaign: The Atlassian Williams F1 team is now thinking with Claude", ...video("xpmag2Gvi0g") },
+  { id: "claude-f1", title: "Claude × Formula 1", detail: "Dancer, campaign: The Atlassian Williams F1 team is now thinking with Claude", venue: "London, UK", ...video("xpmag2Gvi0g") },
   {
     // Q8: credits (doc says "with Benjamin Jonsson"; Dazed credits Imruh Asha and Danial Aitouganov).
-    id: "zomer-karhu", title: "Zomer × Karhu", detail: "Dancer, campaign", venue: "London, UK",
+    id: "zomer-karhu", title: "Zomer × Karhu", detail: "Dancer, campaign: Mind, body, and sole", venue: "London, UK",
     poster: photo("zomer-01", "Zomer × Karhu campaign"),
     photos: series("zomer", "Zomer × Karhu campaign"),
     press: [
@@ -91,10 +95,10 @@ export const PERF: Work[] = [
       { name: "Vogue Japan", href: "https://www.vogue.co.jp/article/karhu-zomer-sneaker-collaboration-interview-masayo-ugawa" },
     ],
   },
-  { id: "dis-information", title: "Dis(Information)", detail: "Dancer, by Benjamin Jonsson", ...video("orMNvNEUzB8") },
-  { id: "breath", title: "Breath", detail: "Dancer, by Liam Woodvine with Ballet Nights Company", venue: "UK tour", poster: photo("breath-01", "Breath, Ballet Nights Company"), photos: series("breath", "Breath, Ballet Nights Company") },
+  { id: "dis-information", title: "Dis(Information)", detail: "Dancer, choreography by Benjamin Jonsson", venue: "London, UK", ...video("orMNvNEUzB8") },
+  { id: "breath", title: "Breath", detail: "Dancer, choreography by Liam Woodvine with Ballet Nights Company", venue: "UK tour", ...video("QPfO5dOuLlA") },
   { id: "before-the-after-perf", title: "Before the After", detail: "Choreography and performance by Taylor Lauren Hughes", ...video("CWFmWHok1bY") },
-  { id: "a-veil-between", title: "Much A Do About Something: A Veil Between", detail: "Dancer, by Riley Roberts Castellant", ...video("lYgOe6lZSsU") },
+  { id: "a-veil-between", title: "Much A Do About Something: A Veil Between", detail: "Dancer, choreography by Riley Roberts Castellant", ...video("lYgOe6lZSsU") },
 ];
 
 // Home, bottom block: "a video trailer or a recent piece" (Q2).
@@ -116,10 +120,10 @@ export const PROJECTS: Project[] = [
   { id: "mokita", title: "Mokita with Dickson Mbi", role: "Dancer", location: "London, UK", photos: series("mokita", "Mokita, Dickson Mbi") },
 ];
 
-// Patrick Owens first (Taylor's note). Q4: project names.
+// Patrick Owens first (Taylor's note).
 export const MD: Project[] = [
-  { id: "md-owens", title: "Photography by Patrick Owens", photos: series("md-owens", "Movement direction, photographed by Patrick Owens") },
-  { id: "md-clandestine", title: "Photography by Clandestine Pilot", photos: series("md-clandestine", "Movement direction, photographed by Clandestine Pilot") },
+  { id: "md-owens", title: "Act 2 Cover, Photography by Patrick Owens", photos: series("md-owens", "Movement direction, photographed by Patrick Owens") },
+  { id: "md-clandestine", title: "Before the After Cover, Photography by Clandestine Pilot", photos: series("md-clandestine", "Movement direction, photographed by Clandestine Pilot") },
 ];
 
 export const TEACH = [
@@ -129,11 +133,10 @@ export const TEACH = [
   "As an active dancer, choreographer, and movement artist, I allow the work I am doing in the industry to inform my teaching practice. I bring my experience choreographing and devising material into the space and equip students with the tools to develop their artistic voice, make movement, and collaborate with others. My goal is to support and guide my students to be proficient movers and technicians while also being able to interact with other artists, share ideas, and explain their point of view, as I find these are essential skills for freelance industry dancers and makers. Ultimately, I want students to leave my class with the physical skills to engage with a variety of movement practices, the ability to reflect on and articulate their choices, and the adaptability to apply those skills within different creative environments.",
 ];
 
-// Q10: confirm email and handle.
 export const CONTACT = {
-  email: "hello@taylorlaurenhughes.com",
-  ig: "@taylorlaurenhughes",
-  igHref: "https://instagram.com/taylorlaurenhughes",
+  email: "taylorhughes722@gmail.com",
+  ig: "@_taylorlaurenhughes",
+  igHref: "https://instagram.com/_taylorlaurenhughes",
 };
 
 export const embedUrl = (yt: string) => `https://www.youtube-nocookie.com/embed/${yt}?autoplay=1&rel=0&modestbranding=1`;

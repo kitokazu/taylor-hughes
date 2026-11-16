@@ -5,7 +5,7 @@ import s from "../pages.module.css";
 
 export const metadata: Metadata = {
   title: "Dance Performance",
-  description: "Taylor Lauren Hughes as a dancer: Claude × F1, Zomer × Karhu, Ballet Nights and more.",
+  description: "Taylor Lauren Hughes as a dancer: Claude × Formula 1, Zomer × Karhu, Ballet Nights and more.",
 };
 
 export default function Performance() {

@@ -16,8 +16,7 @@ export default function Teaching() {
         {TEACH.map((t, i) => <p key={i} className={s.teach}>{t}</p>)}
       </div>
       <div className={s.teachImgs}>
-        <Img photo={PLACED.teaching} className={s.teachImg} sizes="(max-width: 899px) 100vw, 50vw" />
-        <Img photo={PLACED.teaching2} className={s.teachImg} sizes="(max-width: 899px) 100vw, 50vw" />
+        {PLACED.teaching.map((ph) => <Img key={ph.src} photo={ph} className={s.teachImg} sizes="(max-width: 899px) 100vw, 50vw" />)}
       </div>
     </section>
   );
