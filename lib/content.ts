@@ -74,12 +74,7 @@ export const CHOREO: Work[] = [
   { id: "the-space-between", title: "The Space Between", detail: "Choreographer, London Contemporary Dance School", venue: "The Place, London, UK", ...video("7jJ3gfekW1s") },
   { id: "ecid-eht-llor", title: "ecid eht llor", detail: "Choreographer, Spring Dance Concert", venue: "Musco Center for the Arts, Orange, CA", ...video("sU9FKLZcwwg") },
   { id: "locus", title: "Locus", detail: "Choreographer and Performer, Dance Visual", venue: "Los Angeles, CA", ...video("qeiWKer3oGQ") },
-  {
-    // No video; the doc places MD(1), MD(3), MD(2) under Abri Residency.
-    id: "act-2", title: "Act 2", detail: "Choreographer and Performer, Equinox Show created in support of Abri Residency", venue: "Vesper Club, London, UK",
-    poster: photo("md-owens-02", "Act 2"),
-    photos: [photo("md-owens-02", "Act 2"), photo("md-owens-03", "Act 2"), photo("md-owens-06", "Act 2")],
-  },
+  { id: "act-2", title: "Act 2", detail: "Choreographer and Performer, Equinox Show created in support of Abri Residency", venue: "Vesper Club, London, UK", ...video("H6QgqZ-kq-g") },
   { id: "1-618", title: "1.618", detail: "Choreographer, Intime Dance Concert", venue: "Waltmar Theater, Orange, CA", ...video("JM6zBSPJVGE") },
 ];
 

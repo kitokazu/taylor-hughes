@@ -64,4 +64,5 @@ export const POSTERS = {
   "CWFmWHok1bY": { src: "/posters/CWFmWHok1bY.jpg", w: 1280, h: 720 },
   "lYgOe6lZSsU": { src: "/posters/lYgOe6lZSsU.jpg", w: 640, h: 360 },
   "QPfO5dOuLlA": { src: "/posters/QPfO5dOuLlA.jpg", w: 1280, h: 720 },
+  "H6QgqZ-kq-g": { src: "/posters/H6QgqZ-kq-g.jpg", w: 1280, h: 720 },
 } as const;
